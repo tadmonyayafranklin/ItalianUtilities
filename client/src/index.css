@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Italian-themed colors */
+  --italian-blue: 198 65% 30%;
+  --italian-green: 134 59% 41%;
+  --italian-red: 354 70% 54%;
+  --italian-light-blue: 199 100% 95%;
+  --italian-light-green: 134 59% 95%;
+  --italian-light-red: 354 100% 97%;
+  --neutral-light: 210 20% 98%;
+  --neutral-medium: 210 14% 93%;
+  --neutral-dark: 214 11% 48%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-50 text-foreground;
+  }
+}
+
+.italia-stripe {
+  background: linear-gradient(to right, #009246 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ce2b37 66.6%);
+  height: 4px;
+}
+
+.alphabet-filter-button {
+  @apply w-7 h-7 flex items-center justify-center rounded-full bg-[#F8F9FA] text-[#6C757D] font-medium text-sm transition-colors focus:outline-none; 
+}
+
+.alphabet-filter-button:hover {
+  @apply bg-[#e6f7ff] text-[#19647E];
+}
+
+.alphabet-filter-button.active {
+  @apply bg-[#e6f7ff] text-[#19647E];
+}
